@@ -45,6 +45,13 @@ export default defineType({
       type: 'footerSettings',
       group: 'navigation',
     }),
+    //Text
+    defineField({
+      name: 'footerText',
+      title: 'Footer Text',
+      type: 'text',
+      group: 'navigation'
+    }),
     // Custom product options
     defineField({
       name: 'customProductOptions',

@@ -17,7 +17,7 @@ export type SanityLayout = {
   menuLinks?: SanityMenuLink[];
   footer?: {
     links?: SanityLink[];
-    text?: PortableTextBlock[];
+    footerText?: string;
   };
   notFoundPage?: SanityNotFoundPage;
 };
