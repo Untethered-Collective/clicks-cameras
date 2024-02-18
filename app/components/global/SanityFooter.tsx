@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export default function SanityFooter() {
+export default function SanityFooter({ footerText }) {
   return (
     <div className="-my-overlap bg-[#121923] pt-overlap text-white">
       <div
@@ -11,8 +11,7 @@ export default function SanityFooter() {
       >
         {/* Intro */}
         <div>
-          This demo shows how Sanity.io can power remarkable storefronts on
-          Shopify&apos;s Hydrogen framework.
+          <p>{footerText}</p>
         </div>
 
       </div>

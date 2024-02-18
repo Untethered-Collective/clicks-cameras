@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 
 import SanityFooter from '~/components/global/SanityFooter';
-import LogoIcon from '~/components/icons/Logo';
 import {Link} from '~/components/Link';
 import PortableText from '~/components/portableText/PortableText';
 import type {SanityLink} from '~/lib/sanity';
@@ -13,11 +12,12 @@ import {useRootLoaderData} from '~/root';
 export default function Footer() {
   const {layout} = useRootLoaderData();
   const {footer} = layout || {};
+  const footerText = layout?.footerText;
 
   const renderLinks = footer?.links?.map((link: SanityLink) => {
     if (link._type === 'linkExternal') {
       return (
-        <div className="mb-6" key={link._key}>
+        <div key={link._key}>
           <a
             className="linkTextNavigation"
             href={link.url}
@@ -35,7 +35,7 @@ export default function Footer() {
       }
 
       return (
-        <div className="mb-6" key={link._key}>
+        <div key={link._key}>
           <Link className="linkTextNavigation" to={link.slug}>
             {link.title}
           </Link>
@@ -56,36 +56,24 @@ export default function Footer() {
       >
         <div
           className={clsx(
-            'flex flex-col justify-between', //
+            'flex flex-col justify-center', //
             'md:flex-row',
           )}
         >
-          <div className="pb-4">
-            <LogoIcon />
-          </div>
 
           <div
             className={clsx(
-              'my-16 w-full max-w-[22rem] columns-2 gap-x-8 self-start text-md font-bold',
+              'w-full text-center max-w-[22rem] self-center text-md font-bold',
               'md:my-0 md:max-w-[27rem]',
             )}
           >
             {renderLinks}
           </div>
         </div>
-        {footer?.text && (
-          <PortableText
-            blocks={footer.text}
-            className={clsx(
-              'text-xs', //
-              'text-sm text-darkGray',
-            )}
-          />
-        )}
       </div>
 
       {/* Sanity Footer */}
-      <SanityFooter />
+      <SanityFooter footerText={footerText}/>
     </footer>
   );
 }
