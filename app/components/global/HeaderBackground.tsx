@@ -33,7 +33,7 @@ export default function HeaderBackground() {
         <div
           className={clsx(
             'absolute bottom-0 left-1/2 top-0 flex -translate-x-1/2 items-center',
-            'lg:w-[100px] md:w-[95px]',
+            'lg:w-[100px] w-[95px]',
           )}
         >
           <LogoIcon
