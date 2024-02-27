@@ -14,10 +14,8 @@ export const LAYOUT_QUERY = groq`
       links[] {
         ${LINKS}
       },
-      text[]{
-        ${PORTABLE_TEXT}
-      },
     },
+    footerText,
     notFoundPage {
       body,
       "collectionGid": collection->store.gid,
