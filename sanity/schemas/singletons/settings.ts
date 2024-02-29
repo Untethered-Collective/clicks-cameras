@@ -38,6 +38,13 @@ export default defineType({
       type: 'menuSettings',
       group: 'navigation',
     }),
+    // USP bar
+    defineField({
+      name: 'uspBar',
+      title: 'USP bar',
+      type: 'uspBar',
+      group: 'navigation',
+    }),
     // Footer
     defineField({
       name: 'footer',
