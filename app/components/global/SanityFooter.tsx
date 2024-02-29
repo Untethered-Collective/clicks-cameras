@@ -11,7 +11,7 @@ export default function SanityFooter({ footerText }) {
       >
         {/* Intro */}
         <div>
-          <p>{footerText}</p>
+          {footerText}
         </div>
 
       </div>

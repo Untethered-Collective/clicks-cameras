@@ -19,7 +19,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@portabletext/react": "^3.0.4",
-    "@remix-run/react": "^2.4.0",
+    "@remix-run/react": "^2.7.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/mutator": "^3.14.1",
     "@sanity/types": "^3.14.1",

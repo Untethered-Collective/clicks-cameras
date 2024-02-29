@@ -2,7 +2,6 @@ import clsx from 'clsx';
 
 import SanityFooter from '~/components/global/SanityFooter';
 import {Link} from '~/components/Link';
-import PortableText from '~/components/portableText/PortableText';
 import type {SanityLink} from '~/lib/sanity';
 import {useRootLoaderData} from '~/root';
 
@@ -63,7 +62,7 @@ export default function Footer() {
 
           <div
             className={clsx(
-              'w-full text-center max-w-[22rem] self-center text-md font-bold',
+              'w-full max-w-[22rem] self-center text-md font-bold text-center',
               'md:my-0 md:max-w-[27rem]',
             )}
           >

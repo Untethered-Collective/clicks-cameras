@@ -5,6 +5,7 @@ import HeaderBackground from '~/components/global/HeaderBackground';
 import MobileNavigation from '~/components/global/MobileNavigation';
 import Navigation from '~/components/global/Navigation';
 import {useRootLoaderData} from '~/root';
+import UspBar from './UspBar';
 
 /**
  * A server component that specifies the content of the header on the website
@@ -16,12 +17,13 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        'align-center fixed top-0 z-40 flex h-header-sm w-full px-4',
+        'align-center fixed top-8 z-40 flex h-header-sm w-full px-4',
         'md:px-8',
         'lg:h-header-lg',
       )}
       role="banner"
     >
+      <UspBar />
       <HeaderBackground />
       {menuLinks && <MobileNavigation menuLinks={menuLinks} />}
       {menuLinks && <Navigation menuLinks={menuLinks} />}

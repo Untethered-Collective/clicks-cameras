@@ -38,6 +38,13 @@ export default defineType({
       type: 'menuSettings',
       group: 'navigation',
     }),
+    // USP bar
+    defineField({
+      name: 'uspBar',
+      title: 'USP bar',
+      type: 'uspBar',
+      group: 'navigation',
+    }),
     // Footer
     defineField({
       name: 'footer',
@@ -45,12 +52,12 @@ export default defineType({
       type: 'footerSettings',
       group: 'navigation',
     }),
-     // Footer Text
-     defineField({
+    //Text
+    defineField({
       name: 'footerText',
       title: 'Footer Text',
       type: 'text',
-      group: 'navigation',
+      group: 'navigation'
     }),
     // Custom product options
     defineField({
