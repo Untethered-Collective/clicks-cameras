@@ -42,10 +42,11 @@ const seo: SeoHandleFunction = ({data}) => {
       data?.product?.seo?.title ??
       data?.product?.title,
     media: data?.page?.seo?.image ?? media?.image,
-    description:
+    description: (
       data?.page?.seo?.description ??
       data?.product?.seo?.description ??
-      data?.product?.description,
+      data?.product?.description
+    )?.substring(0, 155),
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -212,8 +213,17 @@ export default function ProductHandle() {
             'lg:w-[calc(100%-315px)]',
           )}
         >
+
+          {product?.description && (
+            <Suspense>
+              <Await resolve={variants}>
+                <div className="max-w-[660px] px-4 pb-24 pt-8">{product.description}</div>
+              </Await>
+            </Suspense>
+          )}
+
           {/* Body */}
-          {page?.body && (
+          {/* {page?.body && (
             <Suspense>
               <Await resolve={gids}>
                 <PortableText
@@ -225,7 +235,8 @@ export default function ProductHandle() {
                 />
               </Await>
             </Suspense>
-          )}
+          )} */}
+
         </div>
       </div>
 
